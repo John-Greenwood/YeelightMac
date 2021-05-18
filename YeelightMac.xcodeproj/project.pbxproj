@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D9B060BFFD07F86DD8BF3DE /* Pods_YeelightMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859A6C8A0877E925E9B2EEA2 /* Pods_YeelightMac.framework */; };
 		521AC7F626540B1700995C0D /* YeelightMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AC7F526540B1700995C0D /* YeelightMacApp.swift */; };
 		521AC7FA26540B1900995C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521AC7F926540B1900995C0D /* Assets.xcassets */; };
 		521AC7FD26540B1900995C0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521AC7FC26540B1900995C0D /* Preview Assets.xcassets */; };
@@ -23,6 +24,9 @@
 		521AC7FF26540B1900995C0D /* YeelightMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YeelightMac.entitlements; sourceTree = "<group>"; };
 		521AC80626540E7B00995C0D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		521AC8092654149400995C0D /* NSImage+AverangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+AverangeColor.swift"; sourceTree = "<group>"; };
+		859A6C8A0877E925E9B2EEA2 /* Pods_YeelightMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeelightMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8BAE3D640A9247E5FF960E /* Pods-YeelightMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightMac.release.xcconfig"; path = "Target Support Files/Pods-YeelightMac/Pods-YeelightMac.release.xcconfig"; sourceTree = "<group>"; };
+		C27449654CBA4CCB3ED9B007 /* Pods-YeelightMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightMac.debug.xcconfig"; path = "Target Support Files/Pods-YeelightMac/Pods-YeelightMac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9B060BFFD07F86DD8BF3DE /* Pods_YeelightMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +46,8 @@
 			children = (
 				521AC7F426540B1700995C0D /* YeelightMac */,
 				521AC7F326540B1700995C0D /* Products */,
+				FAC13E08CB0C8BF7AA649420 /* Pods */,
+				E16E6734BA805FE2F544A9A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		E16E6734BA805FE2F544A9A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				859A6C8A0877E925E9B2EEA2 /* Pods_YeelightMac.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAC13E08CB0C8BF7AA649420 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C27449654CBA4CCB3ED9B007 /* Pods-YeelightMac.debug.xcconfig */,
+				AF8BAE3D640A9247E5FF960E /* Pods-YeelightMac.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 521AC80226540B1900995C0D /* Build configuration list for PBXNativeTarget "YeelightMac" */;
 			buildPhases = (
+				41D55F34DBC8F10248EC35A8 /* [CP] Check Pods Manifest.lock */,
 				521AC7EE26540B1700995C0D /* Sources */,
 				521AC7EF26540B1700995C0D /* Frameworks */,
 				521AC7F026540B1700995C0D /* Resources */,
+				2440EA4F9BB0F7445E3372E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -153,6 +180,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2440EA4F9BB0F7445E3372E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YeelightMac/Pods-YeelightMac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YeelightMac/Pods-YeelightMac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YeelightMac/Pods-YeelightMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41D55F34DBC8F10248EC35A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YeelightMac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		521AC7EE26540B1700995C0D /* Sources */ = {
@@ -285,6 +354,7 @@
 		};
 		521AC80326540B1900995C0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C27449654CBA4CCB3ED9B007 /* Pods-YeelightMac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		521AC80426540B1900995C0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF8BAE3D640A9247E5FF960E /* Pods-YeelightMac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
