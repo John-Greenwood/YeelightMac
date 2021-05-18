@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		521AC7F626540B1700995C0D /* YeelightMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AC7F526540B1700995C0D /* YeelightMacApp.swift */; };
-		521AC7F826540B1700995C0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AC7F726540B1700995C0D /* ContentView.swift */; };
 		521AC7FA26540B1900995C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521AC7F926540B1900995C0D /* Assets.xcassets */; };
 		521AC7FD26540B1900995C0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521AC7FC26540B1900995C0D /* Preview Assets.xcassets */; };
+		521AC80726540E7B00995C0D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AC80626540E7B00995C0D /* MainView.swift */; };
+		521AC80A2654149400995C0D /* NSImage+AverangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AC8092654149400995C0D /* NSImage+AverangeColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		521AC7F226540B1700995C0D /* YeelightMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YeelightMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521AC7F526540B1700995C0D /* YeelightMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeelightMacApp.swift; sourceTree = "<group>"; };
-		521AC7F726540B1700995C0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		521AC7F926540B1900995C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521AC7FC26540B1900995C0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		521AC7FE26540B1900995C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521AC7FF26540B1900995C0D /* YeelightMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YeelightMac.entitlements; sourceTree = "<group>"; };
+		521AC80626540E7B00995C0D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		521AC8092654149400995C0D /* NSImage+AverangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+AverangeColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,9 @@
 		521AC7F426540B1700995C0D /* YeelightMac */ = {
 			isa = PBXGroup;
 			children = (
+				521AC80526540E5A00995C0D /* View */,
+				521AC8082654147E00995C0D /* Extension */,
 				521AC7F526540B1700995C0D /* YeelightMacApp.swift */,
-				521AC7F726540B1700995C0D /* ContentView.swift */,
 				521AC7F926540B1900995C0D /* Assets.xcassets */,
 				521AC7FE26540B1900995C0D /* Info.plist */,
 				521AC7FF26540B1900995C0D /* YeelightMac.entitlements */,
@@ -69,6 +72,22 @@
 				521AC7FC26540B1900995C0D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		521AC80526540E5A00995C0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				521AC80626540E7B00995C0D /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		521AC8082654147E00995C0D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				521AC8092654149400995C0D /* NSImage+AverangeColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521AC7F826540B1700995C0D /* ContentView.swift in Sources */,
+				521AC80726540E7B00995C0D /* MainView.swift in Sources */,
+				521AC80A2654149400995C0D /* NSImage+AverangeColor.swift in Sources */,
 				521AC7F626540B1700995C0D /* YeelightMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,12 +289,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YeelightMac/YeelightMac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YeelightMac/Preview Content\"";
 				DEVELOPMENT_TEAM = TZ25Z9MBQ7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YeelightMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,12 +318,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = YeelightMac/YeelightMac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"YeelightMac/Preview Content\"";
 				DEVELOPMENT_TEAM = TZ25Z9MBQ7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YeelightMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
