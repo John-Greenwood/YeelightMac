@@ -16,6 +16,8 @@ class MainC: NSObject, ObservableObject {
     var updateSpeed: TimeInterval = 0.5
     var diffSense = 10
     
+    var downButtons = [DownButtonModel]()
+    
     private var lastColor: NSColor?
     
     var connectionText: String {
@@ -35,6 +37,11 @@ class MainC: NSObject, ObservableObject {
     private var yl = Yeelight()
     
     private var cTimer: Timer?
+    
+    override init() {
+        super.init()
+        createDownButtonActions()
+    }
     
     func power(_ on: Bool) {
         on ? yl.switchOn() : yl.switchOff()
@@ -92,5 +99,28 @@ class MainC: NSObject, ObservableObject {
         if let color = previewImage?.averageColor {
             setColor(color)
         }
+    }
+    
+    // MARK: Down buttons actions
+    
+    private func createDownButtonActions() {
+        downButtons = [
+            .init(action: {[weak self] in self?.openGitHub()},
+                  imageName: "GitHubIcon",
+                  description: "Watch on GitHub"),
+            .init(action: {[weak self] in self?.closeApp()},
+                  imageName: "ExitIcon",
+                  description: "Exit"),
+            
+        ]
+    }
+    
+    private func closeApp() {
+        NSRunningApplication.current.terminate()
+    }
+    
+    private func openGitHub() {
+        let url = URL(string: "https://github.com/John-Greenwood/YeelightMac")!
+        NSWorkspace.shared.open(url)
     }
 }

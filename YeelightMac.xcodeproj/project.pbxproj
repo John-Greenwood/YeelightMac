@@ -17,6 +17,7 @@
 		521AC81526543F6600995C0D /* YeelightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AC81426543F6600995C0D /* YeelightHelper.swift */; };
 		521AC81A26543FF300995C0D /* JSONSplitter.c in Sources */ = {isa = PBXBuildFile; fileRef = 521AC81926543FF300995C0D /* JSONSplitter.c */; };
 		52D6598526AC501C002FFA06 /* MainC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6598426AC501C002FFA06 /* MainC.swift */; };
+		52D6598B26AC71AC002FFA06 /* DownButtonV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6598A26AC71AC002FFA06 /* DownButtonV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		521AC81926543FF300995C0D /* JSONSplitter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = JSONSplitter.c; sourceTree = "<group>"; };
 		521AC81C265441A800995C0D /* Yeelight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yeelight-Bridging-Header.h"; sourceTree = "<group>"; };
 		52D6598426AC501C002FFA06 /* MainC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainC.swift; sourceTree = "<group>"; };
+		52D6598A26AC71AC002FFA06 /* DownButtonV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownButtonV.swift; sourceTree = "<group>"; };
 		859A6C8A0877E925E9B2EEA2 /* Pods_YeelightMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YeelightMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8BAE3D640A9247E5FF960E /* Pods-YeelightMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightMac.release.xcconfig"; path = "Target Support Files/Pods-YeelightMac/Pods-YeelightMac.release.xcconfig"; sourceTree = "<group>"; };
 		C27449654CBA4CCB3ED9B007 /* Pods-YeelightMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YeelightMac.debug.xcconfig"; path = "Target Support Files/Pods-YeelightMac/Pods-YeelightMac.debug.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				52D1472126AC475500CCA80E /* App */,
-				521AC80526540E5A00995C0D /* View */,
+				521AC80526540E5A00995C0D /* Screens */,
 				521AC81626543F6A00995C0D /* Helper */,
 				521AC8082654147E00995C0D /* Extension */,
 				521AC7F926540B1900995C0D /* Assets.xcassets */,
@@ -92,13 +94,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		521AC80526540E5A00995C0D /* View */ = {
+		521AC80526540E5A00995C0D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				52D6598426AC501C002FFA06 /* MainC.swift */,
-				521AC80626540E7B00995C0D /* MainV.swift */,
+				52D6598626AC7180002FFA06 /* Main */,
 			);
-			path = View;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		521AC8082654147E00995C0D /* Extension */ = {
@@ -135,6 +136,24 @@
 				521AC7F526540B1700995C0D /* YeelightMacApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		52D6598626AC7180002FFA06 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				52D6598426AC501C002FFA06 /* MainC.swift */,
+				521AC80626540E7B00995C0D /* MainV.swift */,
+				52D6598726AC7185002FFA06 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		52D6598726AC7185002FFA06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52D6598A26AC71AC002FFA06 /* DownButtonV.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E16E6734BA805FE2F544A9A7 /* Frameworks */ = {
@@ -274,6 +293,7 @@
 				521AC80A2654149400995C0D /* NSImage+AverangeColor.swift in Sources */,
 				521AC81526543F6600995C0D /* YeelightHelper.swift in Sources */,
 				52D6598526AC501C002FFA06 /* MainC.swift in Sources */,
+				52D6598B26AC71AC002FFA06 /* DownButtonV.swift in Sources */,
 				521AC7F626540B1700995C0D /* YeelightMacApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

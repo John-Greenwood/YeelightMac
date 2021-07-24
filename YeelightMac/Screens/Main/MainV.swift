@@ -46,7 +46,7 @@ struct MainV: View {
             Group {
                 HStack {
                     Text("Ambient light")
-                        .font(.title2)
+                        .font(.title3)
                     Spacer()
                     Toggle(isOn: $ambientLightStarted, label: {})
                         .toggleStyle(SwitchToggleStyle())
@@ -71,9 +71,17 @@ struct MainV: View {
             }
             
             Spacer()
+            
+            Divider()
+            
+            HStack {
+                ForEach(c.downButtons) { m in
+                    DownButtonV(model: m)
+                }
+            }
         }
         .padding()
-        .frame(width: 300, height: 400)
+        .frame(width: 300)
     }
 }
 
