@@ -3,4 +3,5 @@
 .LSOverride
 
 Pods/
+xcuserdata/
 *.xcworkspace/
